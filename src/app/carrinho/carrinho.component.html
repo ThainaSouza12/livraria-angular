@@ -1,0 +1,12 @@
+<div>
+    <h1>Carrinho</h1>
+    <div *ngFor="let livro of carrinho">
+      <h2>{{ livro.titulo }}</h2>
+      <p>Autor: {{ livro.autor }}</p>
+      <p>Preço: R$ {{ livro.preco }}</p>
+      <button (click)="removerDoCarrinho(livro)">Remover do Carrinho</button>
+    </div>
+  
+    <div *ngIf="!carrinho.length">Seu carrinho está vazio.</div>
+  </div>
+  

@@ -1,0 +1,10 @@
+{
+    "livros": [
+      { "id": 1, "titulo": "Livro A", "autor": "Autor A", "preco": 29.99, "descricao": "Descrição do Livro A", "estoque": 10 },
+      { "id": 2, "titulo": "Livro B", "autor": "Autor B", "preco": 49.99, "descricao": "Descrição do Livro B", "estoque": 5 },
+      { "id": 3, "titulo": "Livro C", "autor": "Autor C", "preco": 19.99, "descricao": "Descrição do Livro C", "estoque": 0 }
+    ],
+    "usuarios": [],
+    "carrinho": []
+  }
+  

@@ -1,0 +1,16 @@
+<div>
+    <h1>Cadastro</h1>
+    <form (submit)="cadastrar()">
+      <label>Nome:</label>
+      <input [(ngModel)]="usuario.nome" name="nome" required />
+  
+      <label>Email:</label>
+      <input type="email" [(ngModel)]="usuario.email" name="email" required />
+  
+      <label>Senha:</label>
+      <input type="password" [(ngModel)]="usuario.senha" name="senha" required />
+  
+      <button type="submit">Cadastrar</button>
+    </form>
+  </div>
+  

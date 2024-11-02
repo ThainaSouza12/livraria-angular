@@ -1,0 +1,26 @@
+<div>
+    <h1>Livros</h1>
+    <input [(ngModel)]="searchTerm" placeholder="Buscar por título" />
+    
+    <label>Autor:</label>
+    <select [(ngModel)]="selectedAuthor">
+      <option value="">Todos</option>
+      <option *ngFor="let author of authors" [value]="author">{{ author }}</option>
+    </select>
+  
+    <label>Preço:</label>
+    <select [(ngModel)]="selectedPriceRange">
+      <option value="">Todos</option>
+      <option *ngFor="let range of priceRanges" [value]="range.value">{{ range.label }}</option>
+    </select>
+  
+    <div *ngFor="let livro of filteredLivros">
+      <h2>{{ livro.titulo }}</h2>
+      <p>Autor: {{ livro.autor }}</p>
+      <p>Preço: R$ {{ livro.preco }}</p>
+      <p>{{ livro.descricao }}</p>
+      <button (click)="adicionarCarrinho(livro)">Adicionar ao Carrinho</button>
+      <a [routerLink]="['/livro', livro.id]">Ver Detalhes</a>
+    </div>
+  </div>
+  
